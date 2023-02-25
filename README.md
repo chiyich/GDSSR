@@ -7,7 +7,8 @@
 
 
 <p align="center">
-  <img src="figs/im_c_real.PNG" width="50%"><img src="figs/im_c_sy.PNG" width="50%">
+  <img src="assets/compare_to_LWSR.png" width="80%">
+  <img src="assets/GDSSR.png" width="80%">
 </p>
 
 ---
@@ -38,12 +39,12 @@
 
 ---
 
-## Training (4 V100 GPUs)
+## Training (2 NVIDIA RTX 3090)
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 gdssr/train.py -opt options/GDSSR_L1_x4.yml --launcher pytorch --auto_resume
+python -m torch.distributed.launch --nproc_per_node=2 --master_port=4321 gdssr/train.py -opt options/GDSSR_Net_x4.yml --launcher pytorch --auto_resume
 
-python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 gdssr/train.py -opt options/GDSSR_GAN_x4.yml --launcher pytorch --auto_resume
+python -m torch.distributed.launch --nproc_per_node=2 --master_port=4321 gdssr/train.py -opt options/GDSSR_GAN_x4.yml --launcher pytorch --auto_resume
 ```
 
 ## :european_castle: Model Zoo
