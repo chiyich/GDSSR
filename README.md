@@ -49,7 +49,7 @@ python -m torch.distributed.launch --nproc_per_node=2 --master_port=4321 gdssr/t
 
 ## :european_castle: Model Zoo
 
-Please download checkpoints from [Github Release](waiting).
+Please download checkpoints from [Github Release](https://github.com/chiyich/GDSSR/releases/tag/checkpoint).
 
 
 ## Testing
